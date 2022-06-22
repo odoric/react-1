@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookComponent } from '../Book/BookComponent';
+import { MainContext } from '../MainContext';
 import { Books } from "../types";
 
 type BookListProps = {
@@ -8,6 +9,9 @@ type BookListProps = {
 
 export const BookListComponent = ({booksToShow}: BookListProps) => {
     return <>
+        <MainContext.Consumer>
+            {value => <p>Session for : {value.session.currentUser}</p>}            
+        </MainContext.Consumer>
         <ul>
             {booksToShow.map(b => <li><BookComponent key={b.isbn} book={b}/></li>)}    
         </ul>    
