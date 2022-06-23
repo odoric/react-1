@@ -33,3 +33,4 @@ export const tabithaSession: MainContextType = {
 }
 
 export const MainContext = React.createContext(emptyMainContext);
+MainContext.displayName= 'User Context'

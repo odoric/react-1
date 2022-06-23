@@ -13,7 +13,6 @@ export const allBooks: Books = [
     },
     {
         isbn: '998PL',
-        title: 'No Gimmicks',
         author: 'The Machine'
     },
 ]
