@@ -1,8 +1,9 @@
 import React from 'react';
-import { BookComponent } from '../Book/BookComponent';
+import { BookComponentwithBackgroundColor } from '../Book/BookComponent';
 import { SimpleErrorBoundary } from '../ErrorBoundary/SimpleErrorBoundary';
 import { MainContext } from '../MainContext';
 import { Books } from "../types";
+
 
 type BookListProps = {
     booksToShow: Books;
@@ -17,7 +18,7 @@ export const BookListComponent = ({ booksToShow }: BookListProps) => {
             {booksToShow.map(b =>
                 <SimpleErrorBoundary>
                     <li>
-                        <BookComponent key={b.isbn} book={b} />
+                        <BookComponentwithBackgroundColor key={b.isbn} book={b} />
                     </li>
                 </SimpleErrorBoundary>
             )}
