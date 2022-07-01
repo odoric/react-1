@@ -1,5 +1,4 @@
 import React from 'react';
-import { FancyButton } from '../FancyButton/FancyButton';
 import { MainContext } from '../MainContext';
 import { Book, raiseTypeErrorIfNotIsBook } from '../types';
 import { withBackgroundColor } from '../hoc/withBackgroundcolor';
